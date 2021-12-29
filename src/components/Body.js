@@ -46,15 +46,16 @@ const Body = () => {
                 <div className="joined"></div>
                 <div className="bigBlock">
                     <div className="repos"></div>
-                    <div className="followers"></div>
-                    <div className="following"></div>
+                    <div className="followers"><p>Followers</p><p>{items.followers}</p></div>
+                    <div className="following"><p>Following</p><p>{items.following}</p></div>
+                    <div className="empty"></div>
                 </div>
                 <div className="place"><h4>{items.location}</h4></div>
                 <div className="site"></div>
                 <div className="twitter"></div>
-                <div className="workPlace"></div>
+                <div className="workPlace"><p>{items.company}</p></div>
                 <div className="login"></div>
-                <div className="text"></div>
+                <div className="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p></div>
                 <div className="image">
                     <img src={'https://avatars.githubusercontent.com/u/583231?v=4'} alt="image" width='150px'/>
                 </div>
