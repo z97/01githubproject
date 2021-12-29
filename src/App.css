@@ -23,11 +23,18 @@
     grid-template-areas:
     "input button";
     grid-area: Search;
+    border-radius: 20px;
 }
 
-.button { grid-area: button; }
+.button { grid-area: button;
+padding: 25px}
 
-.input { grid-area: input; }
+.buttonSubmit{
+
+}
+
+.input { grid-area: input;
+padding: 25px}
 
 .body {
     border-radius: 20px;
@@ -52,24 +59,35 @@
 .joined { grid-area: joined; }
 
 .bigBlock {  display: grid;
-    grid-template-columns:  1.2fr 1.2fr 1.2fr 0.4fr;
+    grid-template-columns: 1.7fr 0.3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "smallBlock .";
+    grid-area: bigBlock;
+}
+
+
+.smallBlock {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
     "repos followers following";
-    grid-area: bigBlock;
+    grid-area: smallBlock;
     background: #F6F8FF;
     border-radius: 20px;
-;
+
 }
 
-.repos { grid-area: repos; }
+.repos { grid-area: repos;
+padding-left: 25px}
 
 .followers { grid-area: followers; }
 
-.following { grid-area: following;
-border-radius: 20px}
+.following { grid-area: following; }
 
 .place { grid-area: place; }
 
@@ -85,9 +103,7 @@ border-radius: 20px}
 
 .image { grid-area: image;}
 
-.empty{
-    background: white;
-}
+
 img {
     border-radius: 20px
 }

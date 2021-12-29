@@ -30,13 +30,17 @@ const Body = () => {
     }
 
 
+
+
     return (
 
         <div className="container">
             <div className="Search">
-                <div className="button"><button onClick={handleSubmit}>Submit</button></div>
+                <div className="button">
+                    <button id="buttonSubmit" className="w3-round-large w3-large w3-blue" onClick={handleSubmit}>Submit</button>
+                </div>
                 <div className="input">
-                    <input type="text" placeholder="Search GitHub username..." onChange={handleChange}/>
+                    <input  placeholder="Search GitHub username..." onChange={handleChange} class="w3-input w3-border"  />
                 </div>
             </div>
             <div className="body">
@@ -45,17 +49,19 @@ const Body = () => {
                 </div>
                 <div className="joined"></div>
                 <div className="bigBlock">
-                    <div className="repos"></div>
-                    <div className="followers"><p>Followers</p><p>{items.followers}</p></div>
-                    <div className="following"><p>Following</p><p>{items.following}</p></div>
-                    <div className="empty"></div>
+                    <div className="smallBlock">
+                        <div className="repos"><p>Repos</p><p>{items.public_repos}</p></div>
+                        <div className="followers"><p>Followers</p><p>{items.followers}</p></div>
+                        <div className="following"><p>Following</p><p>{items.following}</p></div>
+                    </div>
                 </div>
                 <div className="place"><h4>{items.location}</h4></div>
-                <div className="site"></div>
+                <div className="site"><p><a href={items.blog}>{items.blog}</a></p> </div>
                 <div className="twitter"></div>
                 <div className="workPlace"><p>{items.company}</p></div>
-                <div className="login"></div>
-                <div className="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p></div>
+                <div className="login"><p>@{items.login}</p></div>
+                <div className="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque
+                    volutpat mattis eros.</p></div>
                 <div className="image">
                     <img src={'https://avatars.githubusercontent.com/u/583231?v=4'} alt="image" width='150px'/>
                 </div>
