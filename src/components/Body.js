@@ -66,7 +66,7 @@ const Body = () => {
                 <div className="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque
                     volutpat mattis eros.</p></div>
                 <div className="image">
-                    <img src={'https://avatars.githubusercontent.com/u/583231?v=4'} alt="image" width='117px'/>
+                    <img src={'https://avatars.githubusercontent.com/u/583231?v=4'} alt="logo of user" width='117px'/>
                 </div>
             </div>
         </div>
