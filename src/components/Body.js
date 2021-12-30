@@ -1,12 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import '../App.css'
 
-
-
-
 const Body = () => {
     const [error, setError] = useState({message: ""});
-    const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
     const [input, setInput] = useState();
     const [submit, setSubmit] = useState("octocat");
@@ -14,11 +10,11 @@ const Body = () => {
     const handleSubmit = () => {
         setSubmit(input);
     };
+
     useEffect(() => {
         fetch(`https://api.github.com/users/${submit}`)
             .then(response => response.json())
             .then((result) => {
-                    setIsLoaded(true);
                     setItems(result);
                 }
             )
@@ -26,14 +22,11 @@ const Body = () => {
                 setError(error);
             })
     }, [submit])
-
     function handleChange(event) {
         setInput(event.target.value)
     }
 
-
     return (
-
         <div className="container">
             <div id="devfinder" ><h2>Devfinder</h2></div>
             <div className="Search">
@@ -50,7 +43,6 @@ const Body = () => {
                 <div className="name">
                     <h4>{items.name}</h4>
                 </div>
-                <div className="joined"></div>
                 <div className="bigBlock">
                     <div className="smallBlock">
                         <div className="repos"><p>Repos</p><p>{items.public_repos}</p></div>
@@ -70,8 +62,6 @@ const Body = () => {
                 </div>
             </div>
         </div>
-
-
     );
 };
 
