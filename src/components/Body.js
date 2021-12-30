@@ -2,11 +2,13 @@ import React, {useEffect, useState} from 'react';
 import '../App.css'
 
 
+
+
 const Body = () => {
     const [error, setError] = useState({message: ""});
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState();
     const [submit, setSubmit] = useState("octocat");
 
     const handleSubmit = () => {
@@ -30,17 +32,18 @@ const Body = () => {
     }
 
 
-
-
     return (
 
         <div className="container">
+            <div id="devfinder" ><h2>Devfinder</h2></div>
             <div className="Search">
                 <div className="button">
-                    <button id="buttonSubmit" className="w3-round-large w3-large w3-blue" onClick={handleSubmit}>Submit</button>
+                    <button id="buttonSubmit" onClick={handleSubmit}>Submit</button>
                 </div>
-                <div className="input">
-                    <input  placeholder="Search GitHub username..." onChange={handleChange} class="w3-input w3-border"  />
+
+                <div className="input-container">
+                    <input className="input" placeholder="Search GitHub username..." onChange={handleChange}/>
+                    <div><p>{error.message}</p></div>
                 </div>
             </div>
             <div className="body">
@@ -56,14 +59,14 @@ const Body = () => {
                     </div>
                 </div>
                 <div className="place"><h4>{items.location}</h4></div>
-                <div className="site"><p><a href={items.blog}>{items.blog}</a></p> </div>
-                <div className="twitter"></div>
+                <div className="site"><p><a href={items.blog}><i className="fa">&#xf0c1;</i> {items.blog}</a></p></div>
+                <div className="twitter"><p><i className="fa">&#xf099;</i> Not Avaliable</p></div>
                 <div className="workPlace"><p>{items.company}</p></div>
                 <div className="login"><p>@{items.login}</p></div>
                 <div className="text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque
                     volutpat mattis eros.</p></div>
                 <div className="image">
-                    <img src={'https://avatars.githubusercontent.com/u/583231?v=4'} alt="image" width='150px'/>
+                    <img src={'https://avatars.githubusercontent.com/u/583231?v=4'} alt="image" width='117px'/>
                 </div>
             </div>
         </div>

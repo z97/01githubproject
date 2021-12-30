@@ -1,4 +1,9 @@
-.container {  display: grid;
+#devfinder{
+    padding-left: 100%;
+}
+
+.container {
+    display: grid;
     background: #F6F8FF;
 
     grid-template-columns: 0.8fr 1.4fr 0.8fr;
@@ -24,17 +29,45 @@
     "input button";
     grid-area: Search;
     border-radius: 20px;
+
+
+    padding: 10px;
+    box-shadow: 1px 1px 1px #d4d4d4;
 }
 
-.button { grid-area: button;
-padding: 25px}
+.button {
+    grid-area: button;
+    padding: 25px
+}
 
-.buttonSubmit{
+#buttonSubmit {
+    height: 50px;
+    width: 106px;
+
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+
+    background: #60ABFF;
+    border-radius: 10px;
 
 }
 
-.input { grid-area: input;
-padding: 25px}
+
+.input-container {
+    grid-area: input;
+    padding: 25px;
+
+}
+
+.input {
+    width: 50%;
+    height: 40px;
+}
 
 .body {
     border-radius: 20px;
@@ -52,13 +85,21 @@ padding: 25px}
     ". place twitter"
     ". site workPlace";
     grid-area: body;
+
+    padding: 10px;
+    box-shadow: 1px 1px 1px #d4d4d4;
 }
 
-.name { grid-area: name; }
+.name {
+    grid-area: name;
+}
 
-.joined { grid-area: joined; }
+.joined {
+    grid-area: joined;
+}
 
-.bigBlock {  display: grid;
+.bigBlock {
+    display: grid;
     grid-template-columns: 1.7fr 0.3fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -69,7 +110,8 @@ padding: 25px}
 }
 
 
-.smallBlock {  display: grid;
+.smallBlock {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -82,28 +124,51 @@ padding: 25px}
 
 }
 
-.repos { grid-area: repos;
-padding-left: 25px}
+.repos {
+    grid-area: repos;
+    padding-left: 25px
+}
 
-.followers { grid-area: followers; }
+.followers {
+    grid-area: followers;
+}
 
-.following { grid-area: following; }
+.following {
+    grid-area: following;
+}
 
-.place { grid-area: place; }
+.place {
+    grid-area: place;
+}
 
-.site { grid-area: site; }
+.site {
+    grid-area: site;
+}
 
-.twitter { grid-area: twitter; }
+.twitter {
+    grid-area: twitter;
+}
 
-.workPlace { grid-area: workPlace; }
+.workPlace {
+    grid-area: workPlace;
+}
 
-.login { grid-area: login; }
+.login {
+    grid-area: login;
+}
 
-.text { grid-area: text; }
+.text {
+    grid-area: text;
+}
 
-.image { grid-area: image;}
+.image {
+    grid-area: image;
+    padding-left: 48px;
+    padding-top: 48px;
+
+}
 
 
 img {
-    border-radius: 20px
+    border-radius: 50%;
 }
