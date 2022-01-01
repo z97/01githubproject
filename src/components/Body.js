@@ -31,6 +31,7 @@ const Body = () => {
     function handleChange(event) {
         setInput(event.target.value)
     }
+
     return (
         <Page light={isDarkMode} className="container">
             <Name light={isDarkMode} className={"name2"}>
@@ -123,6 +124,7 @@ const Toggle = styled.button`
   color: ${props => !props.light ? "#eee" : "#333"};
   top: 0;
   right: 0;
+
   &:hover {
     transition: .2s all ease-in-out;
   }

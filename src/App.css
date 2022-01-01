@@ -31,11 +31,6 @@
     padding: 10px;
 }
 
-.button {
-    grid-area: button;
-    padding: 25px
-}
-
 #buttonSubmit {
     height: 50px;
     width: 106px;
@@ -48,6 +43,11 @@
     line-height: 20px;
     background: #60ABFF;
     border-radius: 10px;
+
+}
+
+.button{
+    padding-top: 25px;
 }
 
 .input-container {
@@ -191,11 +191,7 @@ img {
         align-content: center;
     }
 
-    .button {
-        grid-area: button;
-        padding-bottom: 0;
-        padding-top: 0;
-    }
+
 
     .body {
         display: grid;
@@ -275,6 +271,10 @@ img {
     .input-container {
         grid-area: input;
         padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .button{
         padding-top: 0;
     }
 }
