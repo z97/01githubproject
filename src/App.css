@@ -1,38 +1,34 @@
-#devfinder{
-    padding-left: 100%;
-}
-
 .container {
     display: grid;
-    background: #F6F8FF;
-
-    grid-template-columns: 0.8fr 1.4fr 0.8fr;
-    grid-template-rows:  0.4fr 0.5fr 0.1fr 3fr 1fr;
-    gap: 0px 0px;
+    grid-template-columns: 0.8fr 1.4fr 0.9fr;
+    grid-template-rows:  0.4fr 0.5fr 0.1fr 3fr 0.5fr;
+    gap: 0 0;
     grid-auto-flow: row;
+
     grid-template-areas:
-    ". . ."
+    ". name2 ."
     ". Search ."
     ". . ."
     ". body ."
     ". . .";
 }
 
+.name2{
+    grid-area: name2;
+    padding-top: 2%;
+}
+
 .Search {
-    background: white;
     display: grid;
     grid-template-columns: 1.4fr 0.6fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
+    gap: 0 0;
     grid-auto-flow: row;
     grid-template-areas:
     "input button";
     grid-area: Search;
     border-radius: 20px;
-
-
     padding: 10px;
-    box-shadow: 1px 1px 1px #d4d4d4;
 }
 
 .button {
@@ -43,7 +39,6 @@
 #buttonSubmit {
     height: 50px;
     width: 106px;
-
     color: white;
     border: none;
     cursor: pointer;
@@ -51,17 +46,13 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-
     background: #60ABFF;
     border-radius: 10px;
-
 }
-
 
 .input-container {
     grid-area: input;
     padding: 25px;
-
 }
 
 .input {
@@ -71,11 +62,10 @@
 
 .body {
     border-radius: 20px;
-    background: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
+    gap: 0 0;
     grid-auto-flow: row;
     grid-template-areas:
     "image name joined"
@@ -85,9 +75,7 @@
     ". place twitter"
     ". site workPlace";
     grid-area: body;
-
     padding: 10px;
-    box-shadow: 1px 1px 1px #d4d4d4;
 }
 
 .name {
@@ -102,26 +90,23 @@
     display: grid;
     grid-template-columns: 1.7fr 0.3fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
+    gap: 0 0;
     grid-auto-flow: row;
     grid-template-areas:
     "smallBlock .";
     grid-area: bigBlock;
 }
 
-
 .smallBlock {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 0px 0px;
+    gap: 0 0;
     grid-auto-flow: row;
     grid-template-areas:
     "repos followers following";
     grid-area: smallBlock;
-    background: #F6F8FF;
     border-radius: 20px;
-
 }
 
 .repos {
@@ -165,10 +150,131 @@
     grid-area: image;
     padding-left: 48px;
     padding-top: 48px;
-
 }
-
 
 img {
     border-radius: 50%;
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        display: grid;
+        grid-template-columns: 0.1fr 2.8fr 0.1fr;
+        grid-template-rows: 0.2fr 0.5fr 0.2fr 3.9fr 0.2fr;
+        gap: 0 0;
+        grid-auto-flow: row;
+        grid-template-areas:
+    ". name2 ."
+    ". Search ."
+    ". . ."
+    ". body ."
+    ". . .";
+    }
+
+    .Search {
+        display: grid;
+        grid-template-columns: 1.4fr 0.6fr;
+        grid-template-rows: 0.5fr;
+        gap: 0 0;
+        grid-auto-flow: row;
+        grid-template-areas:
+    "input button";
+        grid-area: Search;
+        margin: 0;
+    }
+
+    .input {
+        grid-area: input;
+        width: 100%;
+        height: 40px;
+        align-content: center;
+    }
+
+    .button {
+        grid-area: button;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr  0.4fr 0.4fr 0.4fr 0.4fr;
+        gap: 0 0;
+        grid-auto-flow: row;
+        grid-area: body;
+    }
+
+    .image {
+        grid-area: 1 / 1 / 4 / 2;
+        padding: 0;
+    }
+
+    .name {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .login {
+        grid-area: 2 / 2 / 3 / 3;
+        margin: 0;
+    }
+
+    .text {
+        grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .bigBlock {
+        grid-area: 5 / 1 / 6 / 3;
+    }
+
+    .place {
+        grid-area: 6 / 1 / 7 / 3;
+    }
+
+    .site {
+        grid-area: 7 / 1 / 8 / 3;
+    }
+
+    .twitter {
+        grid-area: 8 / 1 / 9 / 3;
+    }
+
+    .workPlace {
+        grid-area: 9 / 1 / 10 / 3;
+    }
+
+    .smallBlock {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0 0;
+        grid-auto-flow: row;
+        grid-template-areas:
+    "repos followers following";
+        grid-area: 5 / 1 / 6 / 3;
+    }
+
+    .repos {
+        grid-area: repos;
+    }
+
+    .followers {
+        grid-area: followers;
+    }
+
+    .following {
+        grid-area: following;
+    }
+
+    html, body, .container {
+        height: 100%;
+        margin: 0;
+    }
+
+    .input-container {
+        grid-area: input;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
 }
